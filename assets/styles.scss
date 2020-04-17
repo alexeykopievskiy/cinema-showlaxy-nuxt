@@ -148,17 +148,6 @@ html, body {
         color: #fff;
       }
     }
-
-    &__search:before {
-      content: url('../img/search.png');
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      right: 21px;
-      top: 13px;
-      display: block;
-      z-index: 1;
-    }
   }
 
   &-footer {
@@ -273,16 +262,6 @@ html, body {
           top: 20px;
           content: '';
           background-color: #1c1d49;
-        }
-
-        &:after {
-          width: 10px;
-          height: 7px;
-          content: '';
-          position: absolute;
-          background: url(../img/select-arr.png)no-repeat;
-          right: 21px;
-          z-index: 2;
         }
 
         p {
@@ -401,15 +380,6 @@ html, body {
         }
       }
 
-      &__next {
-        background: transparent url(../img/arrow.png)no-repeat;
-        width: 25px;
-        height: 47px;
-        border: none;
-        outline: none;
-        transform: rotate(-180deg);
-        cursor: pointer;
-      }
     }
 
     &--page-list {
@@ -470,31 +440,6 @@ html, body {
           justify-content: space-between;
           top: 49%;
         }
-
-        &-left {
-          background: transparent url(../img/arrow.png)no-repeat;
-          width: 25px;
-          height: 47px;
-          margin-left: 24px;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          position: relative;
-          z-index: 100;
-        }
-
-        &-right {
-          background: transparent url(../img/arrow.png)no-repeat;
-          width: 25px;
-          height: 47px;
-          margin-right: 24px;
-          transform: rotate(-180deg);
-          border: none;
-          outline: none;
-          cursor: pointer;
-          position: relative;
-          z-index: 100;
-        }
       }
 
       &__item {
@@ -542,20 +487,6 @@ html, body {
         margin-top: 37px;
         justify-content: space-between; 
 
-        &-animate {
-          &-next {
-            position: absolute;
-            width: 25px;
-            height: 47px;
-            right: -40px;
-            background: transparent url(../img/arrow.png)no-repeat;
-            border: none;
-            outline: none;
-            transform: rotate(180deg) translateY(50%);
-            top: 50%;
-            cursor: pointer;
-          }
-        }
       }
 
       &__title {
@@ -757,18 +688,6 @@ html, body {
         left: 0;
         background-color: rgba(255, 255, 255, 0.5);
         display: flex;
-      }
-
-      &-btn {
-        background: url(../img/play.png)no-repeat;
-        margin: auto;
-        display: block;
-        border: none;
-        outline: none;
-        width: 78px;
-        height: 78px;
-        cursor: pointer;
-        z-index: 1;
       }
     }
   }

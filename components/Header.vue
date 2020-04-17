@@ -1,6 +1,6 @@
 <template>
-  <header class="v-fall-header grid">
-    <div class="v-fall__container grid grid-v-center grid-v-between">
+  <header class="showlaxy-header grid">
+    <div class="showlaxy__container grid grid-v-center grid-v-between">
       <Logo />
       <Navbar v-bind:menu="toggleMenu" />
       <Form />

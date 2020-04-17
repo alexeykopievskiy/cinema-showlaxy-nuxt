@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link exact class="v-fall-header__logo" to="/">
-    <img class="v-fall-header__img" src="~assets/img/logo-v-fall.png" alt="V-Fall">
+  <nuxt-link exact class="showlaxy-header__logo" to="/">
+    <img class="showlaxy-header__img" src="~assets/img/logo-showlaxy.png" alt="showlaxy">
   </nuxt-link>
 </template>
 

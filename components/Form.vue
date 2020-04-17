@@ -1,6 +1,6 @@
 <template>
-  <form @submit.prevent="searchSubmit" class="v-fall-header__search">
-    <input class="v-fall-header__input" v-model="query" type="text" placeholder="Найти" />
+  <form @submit.prevent="searchSubmit" class="showlaxy-header__search">
+    <input class="showlaxy-header__input" v-model="query" type="text" placeholder="Найти" />
   </form>
 </template>
 
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-.v-fall-header__search:before {
+.showlaxy-header__search:before {
   content: url("~../assets/img/search.png");
   width: 16px;
   height: 16px;

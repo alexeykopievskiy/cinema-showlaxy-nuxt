@@ -1,112 +1,112 @@
 <template>
-  <main class="v-fall-main">
-    <section class="v-fall-main-slider owl-carousel" v-if="posters">
+  <main class="showlaxy-main">
+    <section class="showlaxy-main-slider owl-carousel" v-if="posters">
       <div
         @click="openVideo(item.url)"
         v-for="item in posters"
         :key="item.id"
-        class="v-fall-main-slide"
+        class="showlaxy-main-slide"
       >
         <img :src="item.image" alt />
-        <div class="v-fall-main-slide__content">
-          <p class="v-fall-main-slide__label">
-            <span class="v-fall-main-slide__text">{{item.year}}</span>
-            <span class="v-fall-main-slide__text">{{item.category.join(', ')}}</span>
+        <div class="showlaxy-main-slide__content">
+          <p class="showlaxy-main-slide__label">
+            <span class="showlaxy-main-slide__text">{{item.year}}</span>
+            <span class="showlaxy-main-slide__text">{{item.category.join(', ')}}</span>
           </p>
-          <h3 class="v-fall-main-slide__title">{{item.title}}</h3>
+          <h3 class="showlaxy-main-slide__title">{{item.title}}</h3>
         </div>
       </div>
     </section>
-    <div class="v-fall-main-slide__controls">
-      <button class="v-fall-main-slide__prev"></button>
-      <button class="v-fall-main-slide__next"></button>
+    <div class="showlaxy-main-slide__controls">
+      <button class="showlaxy-main-slide__prev"></button>
+      <button class="showlaxy-main-slide__next"></button>
     </div>
-    <div class="v-fall__container v-fall__container--white v-fall__container--main">
-      <section class="v-fall-main-block">
-        <h2 class="v-fall-main-block__header">Фильмы</h2>
+    <div class="showlaxy__container showlaxy__container--white showlaxy__container--main">
+      <section class="showlaxy-main-block">
+        <h2 class="showlaxy-main-block__header">Фильмы</h2>
         <div
-          class="v-fall-main-block__container v-fall-main-block__container-carousel--default owl-carousel"
+          class="showlaxy-main-block__container showlaxy-main-block__container-carousel--default owl-carousel"
           v-if="films"
         >
           <a
             @click.prevent="openVideo(item.url)"
             v-for="item in films"
             :key="item.id"
-            class="v-fall-main-block__item"
+            class="showlaxy-main-block__item"
             href="#"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <h3 class="v-fall-main-block__title">{{item.title}}</h3>
-            <p class="v-fall-main-block__content">
-              <span class="v-fall-main-block__elem">{{item.year}}</span>
-              <span class="v-fall-main-block__elem">{{item.category.join(', ')}}</span>
+            <img class="showlaxy-main-block__img" :src="item.image" alt />
+            <h3 class="showlaxy-main-block__title">{{item.title}}</h3>
+            <p class="showlaxy-main-block__content">
+              <span class="showlaxy-main-block__elem">{{item.year}}</span>
+              <span class="showlaxy-main-block__elem">{{item.category.join(', ')}}</span>
             </p>
           </a>
         </div>
       </section>
-      <section class="v-fall-main-block v-fall-main-block__carousel">
-        <h2 class="v-fall-main-block__header">РЕКОМЕНДУЕМ ПОСМОТРЕТЬ</h2>
+      <section class="showlaxy-main-block showlaxy-main-block__carousel">
+        <h2 class="showlaxy-main-block__header">РЕКОМЕНДУЕМ ПОСМОТРЕТЬ</h2>
         <div
-          class="v-fall-main-block__container v-fall-main-block__container-carousel owl-carousel"
+          class="showlaxy-main-block__container showlaxy-main-block__container-carousel owl-carousel"
         >
           <a
             @click.prevent="openVideo(item.url)"
             v-for="item in recommendations"
             :key="item.id"
-            class="v-fall-main-block__item v-fall-main-block__item--lg"
+            class="showlaxy-main-block__item showlaxy-main-block__item--lg"
             href="#"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <h3 class="v-fall-main-block__title">{{item.title}}</h3>
-            <p class="v-fall-main-block__content">
-              <span class="v-fall-main-block__elem">{{item.year}}</span>
-              <span class="v-fall-main-block__elem">{{item.category.join(', ')}}</span>
+            <img class="showlaxy-main-block__img" :src="item.image" alt />
+            <h3 class="showlaxy-main-block__title">{{item.title}}</h3>
+            <p class="showlaxy-main-block__content">
+              <span class="showlaxy-main-block__elem">{{item.year}}</span>
+              <span class="showlaxy-main-block__elem">{{item.category.join(', ')}}</span>
             </p>
           </a>
         </div>
-        <div class="v-fall-main-block__carousel-btn">
-          <button class="v-fall-main-block__carousel-left"></button>
-          <button class="v-fall-main-block__carousel-right"></button>
+        <div class="showlaxy-main-block__carousel-btn">
+          <button class="showlaxy-main-block__carousel-left"></button>
+          <button class="showlaxy-main-block__carousel-right"></button>
         </div>
       </section>
-      <section class="v-fall-main-block">
-        <h2 class="v-fall-main-block__header">Мультфильмы</h2>
-        <p class="v-fall-main-block__subtitle">Коллекция лучших мультфильмов для детей и родителей</p>
+      <section class="showlaxy-main-block">
+        <h2 class="showlaxy-main-block__header">Мультфильмы</h2>
+        <p class="showlaxy-main-block__subtitle">Коллекция лучших мультфильмов для детей и родителей</p>
         <div
-          class="v-fall-main-block__container v-fall-main-block__container-carousel--default owl-carousel"
+          class="showlaxy-main-block__container showlaxy-main-block__container-carousel--default owl-carousel"
           v-if="cartoons"
         >
           <a
             @click.prevent="openVideo(item.url)"
             v-for="item in cartoons"
             :key="item.id"
-            class="v-fall-main-block__item"
+            class="showlaxy-main-block__item"
             href="#"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <h3 class="v-fall-main-block__title">{{item.title}}</h3>
-            <p class="v-fall-main-block__content">
-              <span class="v-fall-main-block__elem">{{item.year}}</span>
-              <span class="v-fall-main-block__elem">{{item.category.join(', ')}}</span>
+            <img class="showlaxy-main-block__img" :src="item.image" alt />
+            <h3 class="showlaxy-main-block__title">{{item.title}}</h3>
+            <p class="showlaxy-main-block__content">
+              <span class="showlaxy-main-block__elem">{{item.year}}</span>
+              <span class="showlaxy-main-block__elem">{{item.category.join(', ')}}</span>
             </p>
           </a>
         </div>
       </section>
-      <section class="v-fall-main-block">
-        <h2 class="v-fall-main-block__header">Новости</h2>
+      <section class="showlaxy-main-block">
+        <h2 class="showlaxy-main-block__header">Новости</h2>
         <div
-          class="v-fall-main-block__container v-fall-main-block__container-carousel v-fall-main-block__container-carousel--news owl-carousel"
+          class="showlaxy-main-block__container showlaxy-main-block__container-carousel showlaxy-main-block__container-carousel--news owl-carousel"
           v-if="news"
         >
           <a
             @click.prevent="openNews(item.url)"
             v-for="item of news"
             :key="item.id"
-            class="v-fall-main-block__item v-fall-main-block__item--lg"
+            class="showlaxy-main-block__item showlaxy-main-block__item--lg"
             href="#"
           >
-            <img class="v-fall-main-block__img" :src="item.image" alt />
-            <p class="v-fall-main-block__text">{{item.title}}</p>
+            <img class="showlaxy-main-block__img" :src="item.image" alt />
+            <p class="showlaxy-main-block__text">{{item.title}}</p>
           </a>
         </div>
       </section>
@@ -128,28 +128,28 @@ export default {
     };
   },
   mounted() {
-    $(".v-fall-main-slider").owlCarousel({
+    $(".showlaxy-main-slider").owlCarousel({
       center: true,
       items: 2,
       loop: true,
       margin: 10,
       autoWidth: true
     });
-    $(".v-fall-main-slide__next").click(function() {
-      $(".v-fall-main-slider").trigger("next.owl.carousel", [300]);
+    $(".showlaxy-main-slide__next").click(function() {
+      $(".showlaxy-main-slider").trigger("next.owl.carousel", [300]);
     });
-    $(".v-fall-main-slide__prev").click(function() {
-      $(".v-fall-main-slider").trigger("prev.owl.carousel", [300]);
+    $(".showlaxy-main-slide__prev").click(function() {
+      $(".showlaxy-main-slider").trigger("prev.owl.carousel", [300]);
     });
 
-    $(".v-fall-main-block__container-carousel").owlCarousel({
+    $(".showlaxy-main-block__container-carousel").owlCarousel({
       items: 4,
       loop: true,
       margin: 26,
       autoWidth: true
     });
 
-    $(".v-fall-main-block__container-carousel--default").owlCarousel({
+    $(".showlaxy-main-block__container-carousel--default").owlCarousel({
       items: 6,
       loop: true,
       margin: 17,
@@ -159,13 +159,13 @@ export default {
       autoplayHoverPause: true
     });
 
-    $(".v-fall-main-block__carousel-right").click(function() {
-      $(".v-fall-main-block__container-carousel").trigger("next.owl.carousel", [
+    $(".showlaxy-main-block__carousel-right").click(function() {
+      $(".showlaxy-main-block__container-carousel").trigger("next.owl.carousel", [
         300
       ]);
     });
-    $(".v-fall-main-block__carousel-left").click(function() {
-      $(".v-fall-main-block__container-carousel").trigger("prev.owl.carousel", [
+    $(".showlaxy-main-block__carousel-left").click(function() {
+      $(".showlaxy-main-block__container-carousel").trigger("prev.owl.carousel", [
         300
       ]);
     });
@@ -193,7 +193,7 @@ export default {
 </script>
 
 <style lang="scss">
-.v-fall-main {
+.showlaxy-main {
   &-slide {
     &__prev {
       margin-left: 80px;
@@ -204,10 +204,6 @@ export default {
       outline: none;
       cursor: pointer;
 
-      &:hover {
-        background: transparent url("../assets/img/arrow-hover.png") no-repeat;
-        transform: rotate(-180deg);
-      }
     }
     &__next {
       margin-right: 80px;
@@ -219,17 +215,11 @@ export default {
       outline: none;
       transform: rotate(-180deg);
       cursor: pointer;
-
-      &:hover {
-        background: transparent url("../assets/img/arrow-hover.png") no-repeat;
-        transform: rotate(0deg);
-      }
     }
   }
   &-block {
     &__carousel {
       &-left {
-        background: transparent url("../assets/img/arrow-hover.png") no-repeat;
         width: 27px;
         height: 42px;
         margin-left: 24px;
@@ -241,7 +231,6 @@ export default {
         z-index: 100;
       }
       &-right {
-        background: transparent url("../assets/img/arrow-hover.png") no-repeat;
         width: 27px;
         height: 42px;
         margin-right: 24px;
@@ -254,7 +243,7 @@ export default {
     }
   }
 }
-.v-fall-main-block__container-carousel > span {
+.showlaxy-main-block__container-carousel > span {
   position: absolute;
   top: 50%;
   left: 0;
@@ -269,40 +258,40 @@ export default {
   display: flex !important;
 }
 
-.v-fall-main-block__img {
+.showlaxy-main-block__img {
   width: 100%;
   height: auto;
 }
 
-.v-fall-main-block__container {
+.showlaxy-main-block__container {
   width: 95%;
 }
-.v-fall-main-slider.owl-carousel .owl-item img {
+.showlaxy-main-slider.owl-carousel .owl-item img {
   height: 100%;
   min-width: 1330px;
 }
 
-.v-fall-main-slide {
+.showlaxy-main-slide {
   height: 479px;
 }
 
-.v-fall-main-block__container-carousel {
-  .v-fall-main-block__item--lg .v-fall-main-block__img {
+.showlaxy-main-block__container-carousel {
+  .showlaxy-main-block__item--lg .showlaxy-main-block__img {
     height: 400px;
   }
 }
 
-.v-fall-main-block__container-carousel--news {
-  .v-fall-main-block__item--lg .v-fall-main-block__img {
+.showlaxy-main-block__container-carousel--news {
+  .showlaxy-main-block__item--lg .showlaxy-main-block__img {
     width: auto;
     height: 284px;
   }
 }
 
-.v-fall-main-block__item--lg {
+.showlaxy-main-block__item--lg {
   overflow: hidden;
 
-  .v-fall-main-block__img {
+  .showlaxy-main-block__img {
     width: auto;
   }
 }

@@ -1,35 +1,35 @@
 <template>
-  <main class="v-fall-article v-fall-article">
-    <div class="v-fall__container v-fall__container--white v-fall__container--article">
-      <section class="v-fall-article-block grid grid-column">
-        <h2 class="v-fall-article-block__header" v-if="article">{{article.title}}</h2>
-        <div class="v-fall-article-block__poster">
+  <main class="showlaxy-article showlaxy-article">
+    <div class="showlaxy__container showlaxy__container--white showlaxy__container--article">
+      <section class="showlaxy-article-block grid grid-column">
+        <h2 class="showlaxy-article-block__header" v-if="article">{{article.title}}</h2>
+        <div class="showlaxy-article-block__poster">
           <img
-            class="v-fall-article-block__img"
+            class="showlaxy-article-block__img"
             style="width: 100%"
             v-if="article"
             :src="article.poster"
             alt
           />
         </div>
-        <div class="v-fall-article-block__content grid" v-if="article">
-          <div class="v-fall-article-block__content--left">
+        <div class="showlaxy-article-block__content grid" v-if="article">
+          <div class="showlaxy-article-block__content--left">
             <h3
-              class="v-fall-article-block__subheader"
+              class="showlaxy-article-block__subheader"
             >{{article.excerpt}}</h3>
             <div v-html="article.content"></div>
           </div>
-          <div class="v-fall-article-block__content--right">
-            <div class="v-fall-article-block__promo" v-if="ad" v-html="ad"></div>
-            <div class="v-fall-article-block__related" v-if="related">
-              <p class="v-fall-article-block__related-header">Смотрите также</p>
+          <div class="showlaxy-article-block__content--right">
+            <div class="showlaxy-article-block__promo" v-if="ad" v-html="ad"></div>
+            <div class="showlaxy-article-block__related" v-if="related">
+              <p class="showlaxy-article-block__related-header">Смотрите также</p>
               <a
                 @click.prevent="openNews(related.url)"
-                class="v-fall-main-block__item v-fall-main-block__item--lg"
+                class="showlaxy-main-block__item showlaxy-main-block__item--lg"
                 href="#"
               >
-                <img class="v-fall-main-block__img" :src="related.image" alt />
-                <p class="v-fall-main-block__text">{{related.title}}</p>
+                <img class="showlaxy-main-block__img" :src="related.image" alt />
+                <p class="showlaxy-main-block__text">{{related.title}}</p>
               </a>
             </div>
           </div>

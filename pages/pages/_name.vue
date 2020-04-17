@@ -1,9 +1,9 @@
 <template>
-  <main class="v-fall-main">
-    <div class="v-fall__container grid grid-column v-fall__container--contacts">
-      <section class="v-fall__container--white v-fall-contacts__block">
-        <h2 class="v-fall-contacts__header">{{name}}</h2>
-        <div class="v-fall-contacts__content" v-html="content"></div>
+  <main class="showlaxy-main">
+    <div class="showlaxy__container grid grid-column showlaxy__container--contacts">
+      <section class="showlaxy__container--white showlaxy-contacts__block">
+        <h2 class="showlaxy-contacts__header">{{name}}</h2>
+        <div class="showlaxy-contacts__content" v-html="content"></div>
       </section>
     </div>
   </main>
@@ -24,7 +24,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "V-fall - лучшие фильмы в формате HD"
+          content: "showlaxy - лучшие фильмы в формате HD"
         }
       ]
     };
