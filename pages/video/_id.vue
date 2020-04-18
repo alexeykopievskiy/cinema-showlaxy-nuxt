@@ -140,7 +140,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .showlaxy-inner__block-container {
   padding-top: 40px;
 }
